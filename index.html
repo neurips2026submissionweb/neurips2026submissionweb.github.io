@@ -10,8 +10,6 @@
 
 <nav>
   <a href="#results">Main Results</a>
-  <a href="#ablations">Ablations</a>
-  <a href="#demos">Long Rollouts</a>
 </nav>
 
 <header>
@@ -160,83 +158,6 @@
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════════════ -->
-<h2 id="ablations">Ablation Studies</h2>
-
-<!-- VAE -->
-<h3>Latent-Space Formulation: WanVAE vs. FluxVAE &nbsp;<span style="font-weight:400;color:#888;font-size:0.82rem">Pour Water — OoD</span></h3>
-<p class="env-desc">
-  WanVAE applies 4× temporal compression coupling consecutive frames in latent space.
-  FluxVAE encodes each frame independently (1× temporal compression).
-</p>
-<div class="vid-row col2">
-  <div class="vid-cell">
-    <div class="vid-label">WanVAE — ours</div>
-    <video autoplay loop muted playsinline src="videos/vae_wanvae_ood.mp4"></video>
-    <div class="vid-caption">OoD PSNR 24.57 dB &nbsp;·&nbsp; SSIM 0.875</div>
-  </div>
-  <div class="vid-cell">
-    <div class="vid-label">FluxVAE — frame-independent</div>
-    <video autoplay loop muted playsinline src="videos/vae_fluxvae_ood.mp4"></video>
-    <div class="vid-caption">OoD PSNR 24.09 dB &nbsp;·&nbsp; SSIM 0.875</div>
-  </div>
-</div>
-
-<!-- Action Dim -->
-<h3>Action Dimensionality: 3-DoF vs. 8-DoF &nbsp;<span style="font-weight:400;color:#888;font-size:0.82rem">Cloth Move — OoD</span></h3>
-<p class="env-desc">
-  3-DoF: shared Δxyz displacement for both arms (benchmark default).
-  8-DoF: full per-arm pose + grasp signal. Richer conditioning dramatically improves OoD generalization.
-</p>
-<div class="vid-row col2">
-  <div class="vid-cell">
-    <div class="vid-label">3-DoF — benchmark</div>
-    <video autoplay loop muted playsinline src="videos/actdim_3dof_ood.mp4"></video>
-    <div class="vid-caption">OoD PSNR 16.23 dB</div>
-  </div>
-  <div class="vid-cell">
-    <div class="vid-label">8-DoF — full per-arm</div>
-    <video autoplay loop muted playsinline src="videos/actdim_8dof_ood.mp4"></video>
-    <div class="vid-caption">OoD PSNR 22.82 dB &nbsp;(+6.59 dB)</div>
-  </div>
-</div>
-
-<!-- Action Conditioning -->
-<h3>Action Conditioning: AdaLN vs. Cross-Attention &nbsp;<span style="font-weight:400;color:#888;font-size:0.82rem">Robot Arm — OoD</span></h3>
-<p class="env-desc">
-  AdaLN injects action as a global scale-shift per block.
-  Cross-attention injects per-timestep action tokens. Gains are larger for high action-dim tasks.
-</p>
-<div class="vid-row col2">
-  <div class="vid-cell">
-    <div class="vid-label">AdaLN — default</div>
-    <video autoplay loop muted playsinline src="videos/acond_adaln_ood.mp4"></video>
-    <div class="vid-caption">OoD PSNR 21.83 dB</div>
-  </div>
-  <div class="vid-cell">
-    <div class="vid-label">Cross-Attention</div>
-    <video autoplay loop muted playsinline src="videos/acond_crossattn_ood.mp4"></video>
-    <div class="vid-caption">OoD PSNR 23.38 dB &nbsp;(+1.55 dB)</div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════════════════════════════════ -->
-<h2 id="demos">Long Rollouts</h2>
-<p class="env-desc">Full-episode rollouts showing prediction quality over longer horizons.</p>
-
-<h3>Pour Water</h3>
-<div class="vid-row col2">
-  <div class="vid-cell">
-    <video autoplay loop muted playsinline src="videos/demo_pour_water.mp4" style="max-height:300px;width:auto;"></video>
-  </div>
-</div>
-
-<h3>Push Cube</h3>
-<div class="vid-row col2">
-  <div class="vid-cell">
-    <video autoplay loop muted playsinline src="videos/demo_push_cube.mp4" style="max-height:300px;width:auto;"></video>
-  </div>
-</div>
 
 <footer>Anonymous submission &nbsp;·&nbsp; NeurIPS 2026 &nbsp;·&nbsp; Video supplement</footer>
 
