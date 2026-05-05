@@ -42,34 +42,36 @@ h1 { font-size: 1.45rem; font-weight: 700; margin-bottom: 6px; line-height: 1.35
   flex-wrap: wrap;
 }
 .group-label {
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: 0.68rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
-  padding: 3px 8px;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
   border-radius: 4px;
-  margin-right: 2px;
+  margin-right: 4px;
+  border: 2px solid currentColor;
 }
 .env-btn {
   display: inline-block;
-  padding: 4px 12px;
-  border-radius: 5px;
-  font-size: 0.8rem;
-  font-weight: 600;
+  padding: 3px 11px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 500;
   text-decoration: none;
   transition: opacity 0.15s;
+  border: 1px solid transparent;
 }
-.env-btn:hover { opacity: 0.75; }
+.env-btn:hover { opacity: 0.7; }
 
-/* colour palette per category */
-.rigid-label    { background: #dbeafe; color: #1e40af; }
-.rigid-btn      { background: #dbeafe; color: #1e40af; }
-.deform-label   { background: #d1fae5; color: #065f46; }
-.deform-btn     { background: #d1fae5; color: #065f46; }
-.particle-label { background: #fef3c7; color: #92400e; }
-.particle-btn   { background: #fef3c7; color: #92400e; }
-.kine-label     { background: #ede9fe; color: #4c1d95; }
-.kine-btn       { background: #ede9fe; color: #4c1d95; }
+/* colour palette — category labels: solid fill; env buttons: light tint */
+.rigid-label    { background: #1e40af; color: #fff; border-color: #1e40af; }
+.rigid-btn      { background: #eff6ff; color: #1e40af; border-color: #bfdbfe; }
+.deform-label   { background: #065f46; color: #fff; border-color: #065f46; }
+.deform-btn     { background: #f0fdf4; color: #065f46; border-color: #a7f3d0; }
+.particle-label { background: #92400e; color: #fff; border-color: #92400e; }
+.particle-btn   { background: #fffbeb; color: #92400e; border-color: #fde68a; }
+.kine-label     { background: #4c1d95; color: #fff; border-color: #4c1d95; }
+.kine-btn       { background: #f5f3ff; color: #4c1d95; border-color: #c4b5fd; }
 
 /* ── section headings ────────────────────────────────────────────────── */
 h2 {
