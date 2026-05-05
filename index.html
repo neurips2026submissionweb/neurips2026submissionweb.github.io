@@ -2,9 +2,204 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Hello World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACWM-Phys — Video Results</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Hello World</h1>
+
+<h1>ACWM-Phys: Investigating Generalized Physical Interaction in Action-Conditioned Video World Models</h1>
+<div class="authors">Anonymous Authors — NeurIPS 2026 Submission</div>
+<div class="venue">This page contains video results that supplement the PDF submission.</div>
+
+<div class="abstract">
+  We introduce <strong>ACWM-Phys</strong>, a benchmark for evaluating action-conditioned video world models
+  across four physically diverse interaction regimes (rigid-body, deformable, particle, and kinematics),
+  and <strong>ACWM-DiT</strong>, a latent diffusion transformer baseline trained with flow matching.
+  Each video below shows <em>ground truth (left)</em> alongside the <em>model prediction (right)</em>.
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<h2>Main Results — All 8 Environments</h2>
+<p style="font-size:0.85rem;color:#666;margin-bottom:8px;">
+  Each pair shows <strong>In-Distribution (InD)</strong> and <strong>Out-of-Distribution (OoD)</strong>
+  episodes. Left half of each video = ground truth; right half = prediction.
+</p>
+
+<!-- Push Cube -->
+<h3>Push Cube &nbsp;<span style="font-weight:400;color:#888;font-size:0.85rem">Rigid-body · action dim 2</span></h3>
+<p class="env-desc">A robot pusher translates a cube to a target position. OoD: unseen workspace regions and multi-cube configurations.</p>
+<div class="vid-row col2">
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ind">InD</span> In-Distribution</div>
+    <video autoplay loop muted playsinline src="videos/push_cube_ind.mp4"></video>
+  </div>
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span> Out-of-Distribution</div>
+    <video autoplay loop muted playsinline src="videos/push_cube_ood.mp4"></video>
+  </div>
+</div>
+
+<!-- Stack Cube -->
+<h3>Stack Cube &nbsp;<span style="font-weight:400;color:#888;font-size:0.85rem">Rigid-body · action dim 7</span></h3>
+<p class="env-desc">A robot arm picks and stacks cubes. OoD: unseen target placement positions.</p>
+<div class="vid-row col2">
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ind">InD</span></div>
+    <video autoplay loop muted playsinline src="videos/stack_cube_ind.mp4"></video>
+  </div>
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span></div>
+    <video autoplay loop muted playsinline src="videos/stack_cube_ood.mp4"></video>
+  </div>
+</div>
+
+<!-- Push Rope -->
+<h3>Push Rope &nbsp;<span style="font-weight:400;color:#888;font-size:0.85rem">Deformable · action dim 2</span></h3>
+<p class="env-desc">A disk pusher deforms a rope. OoD: unseen rope stiffness values.</p>
+<div class="vid-row col2">
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ind">InD</span></div>
+    <video autoplay loop muted playsinline src="videos/push_rope_ind.mp4"></video>
+  </div>
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span></div>
+    <video autoplay loop muted playsinline src="videos/push_rope_ood.mp4"></video>
+  </div>
+</div>
+
+<!-- Cloth Move -->
+<h3>Cloth Move &nbsp;<span style="font-weight:400;color:#888;font-size:0.85rem">Deformable · action dim 3</span></h3>
+<p class="env-desc">Two robot arms manipulate a cloth. OoD: unseen cloth sizes.</p>
+<div class="vid-row col2">
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ind">InD</span></div>
+    <video autoplay loop muted playsinline src="videos/cloth_move_ind.mp4"></video>
+  </div>
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span></div>
+    <video autoplay loop muted playsinline src="videos/cloth_move_ood.mp4"></video>
+  </div>
+</div>
+
+<!-- Push Sand -->
+<h3>Push Sand &nbsp;<span style="font-weight:400;color:#888;font-size:0.85rem">Particle · action dim 7</span></h3>
+<p class="env-desc">A robot arm pushes granular sand particles. OoD: doubled particle count.</p>
+<div class="vid-row col2">
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ind">InD</span></div>
+    <video autoplay loop muted playsinline src="videos/push_sand_ind.mp4"></video>
+  </div>
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span></div>
+    <video autoplay loop muted playsinline src="videos/push_sand_ood.mp4"></video>
+  </div>
+</div>
+
+<!-- Pour Water -->
+<h3>Pour Water &nbsp;<span style="font-weight:400;color:#888;font-size:0.85rem">Particle · action dim 4</span></h3>
+<p class="env-desc">A robot arm pours water into a container. OoD: unseen water quantities.</p>
+<div class="vid-row col2">
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ind">InD</span></div>
+    <video autoplay loop muted playsinline src="videos/pour_water_ind.mp4"></video>
+  </div>
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span></div>
+    <video autoplay loop muted playsinline src="videos/pour_water_ood.mp4"></video>
+  </div>
+</div>
+
+<!-- Robot Arm -->
+<h3>Robot Arm &nbsp;<span style="font-weight:400;color:#888;font-size:0.85rem">Kinematics · action dim 7</span></h3>
+<p class="env-desc">A 7-DoF robot arm reaches targets. OoD: expanded workspace regions.</p>
+<div class="vid-row col2">
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ind">InD</span></div>
+    <video autoplay loop muted playsinline src="videos/robot_arm_ind.mp4"></video>
+  </div>
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span></div>
+    <video autoplay loop muted playsinline src="videos/robot_arm_ood.mp4"></video>
+  </div>
+</div>
+
+<!-- Reacher -->
+<h3>Reacher &nbsp;<span style="font-weight:400;color:#888;font-size:0.85rem">Kinematics · action dim 2</span></h3>
+<p class="env-desc">A 2-link planar arm reaches goal positions. OoD: corner-sector goal regions unseen during training.</p>
+<div class="vid-row col2">
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ind">InD</span></div>
+    <video autoplay loop muted playsinline src="videos/reacher_ind.mp4"></video>
+  </div>
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span></div>
+    <video autoplay loop muted playsinline src="videos/reacher_ood.mp4"></video>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<h2>Ablation Studies</h2>
+
+<!-- VAE -->
+<h3>Latent-Space Formulation: WanVAE vs. FluxVAE &nbsp;<span style="font-weight:400;color:#888;font-size:0.85rem">Pour Water — OoD</span></h3>
+<p class="env-desc">
+  WanVAE applies 4× temporal compression, coupling consecutive frames in the latent space.
+  FluxVAE encodes each frame independently. Both evaluated on out-of-distribution water quantities.
+</p>
+<div class="vid-row col2">
+  <div class="vid-cell">
+    <div class="vid-label">WanVAE (ours)</div>
+    <video autoplay loop muted playsinline src="videos/vae_wanvae_ood.mp4"></video>
+    <div class="vid-caption">PSNR 24.57 dB &nbsp;·&nbsp; SSIM 0.875</div>
+  </div>
+  <div class="vid-cell">
+    <div class="vid-label">FluxVAE (frame-independent)</div>
+    <video autoplay loop muted playsinline src="videos/vae_fluxvae_ood.mp4"></video>
+    <div class="vid-caption">PSNR 24.09 dB &nbsp;·&nbsp; SSIM 0.875</div>
+  </div>
+</div>
+
+<!-- Action Dim -->
+<h3>Action Dimensionality: 3-DoF vs. 8-DoF &nbsp;<span style="font-weight:400;color:#888;font-size:0.85rem">Cloth Move — OoD</span></h3>
+<p class="env-desc">
+  3-DoF uses a shared Δxyz displacement for both arms.
+  8-DoF provides full per-arm pose + grasp signals. Evaluated on out-of-distribution cloth sizes.
+</p>
+<div class="vid-row col2">
+  <div class="vid-cell">
+    <div class="vid-label">3-DoF actions (benchmark)</div>
+    <video autoplay loop muted playsinline src="videos/actdim_3dof_ood.mp4"></video>
+    <div class="vid-caption">OoD PSNR 16.23 dB</div>
+  </div>
+  <div class="vid-cell">
+    <div class="vid-label">8-DoF actions (full per-arm)</div>
+    <video autoplay loop muted playsinline src="videos/actdim_8dof_ood.mp4"></video>
+    <div class="vid-caption">OoD PSNR 22.82 dB &nbsp;(+6.59 dB)</div>
+  </div>
+</div>
+
+<!-- Action Conditioning -->
+<h3>Action Conditioning: AdaLN vs. Cross-Attention &nbsp;<span style="font-weight:400;color:#888;font-size:0.85rem">Robot Arm — OoD</span></h3>
+<p class="env-desc">
+  AdaLN injects action as a global scale-shift at each block.
+  Cross-attention injects per-timestep action tokens via dedicated attention layers.
+  Evaluated on out-of-distribution workspace regions.
+</p>
+<div class="vid-row col2">
+  <div class="vid-cell">
+    <div class="vid-label">AdaLN (default)</div>
+    <video autoplay loop muted playsinline src="videos/acond_adaln_ood.mp4"></video>
+    <div class="vid-caption">OoD PSNR 21.83 dB</div>
+  </div>
+  <div class="vid-cell">
+    <div class="vid-label">Cross-Attention</div>
+    <video autoplay loop muted playsinline src="videos/acond_crossattn_ood.mp4"></video>
+    <div class="vid-caption">OoD PSNR 23.38 dB &nbsp;(+1.55 dB)</div>
+  </div>
+</div>
+
+<footer>Anonymous submission · NeurIPS 2026 · Video supplement</footer>
+
 </body>
 </html>
