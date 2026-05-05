@@ -32,22 +32,25 @@
 <div class="category-label">Rigid-Body</div>
 
 <h3>Push Cube &nbsp;<span style="font-weight:400;color:#888;font-size:0.82rem">action dim 2</span></h3>
-<p class="env-desc">A disk pusher translates a cube to a target. OoD: unseen workspace regions and multi-cube scenes.</p>
+<p class="env-desc">A disk pusher translates a cube to a target. OoD (1): unseen workspace region. OoD (2): 4+ cubes unseen during training.</p>
 <div class="vid-row col2">
   <div class="vid-cell">
-    <div class="vid-label"><span class="tag tag-ind">InD</span> In-Distribution</div>
+    <div class="vid-label"><span class="tag tag-ind">InD</span> Episode 1</div>
     <video autoplay loop muted playsinline src="videos/push_cube_ind.mp4"></video>
   </div>
   <div class="vid-cell">
-    <div class="vid-label"><span class="tag tag-ood">OoD</span> Out-of-Distribution</div>
-    <video autoplay loop muted playsinline src="videos/push_cube_ood.mp4"></video>
+    <div class="vid-label"><span class="tag tag-ind">InD</span> Episode 2</div>
+    <video autoplay loop muted playsinline src="videos/push_cube_ind2.mp4"></video>
   </div>
 </div>
-<div class="vid-row col2" style="margin-top:6px">
-  <div></div>
+<div class="vid-row col2">
   <div class="vid-cell">
-    <div class="vid-label"><span class="tag tag-ood">OoD</span> Another episode</div>
-    <video autoplay loop muted playsinline src="videos/push_cube_ood2.mp4"></video>
+    <div class="vid-label"><span class="tag tag-ood">OoD</span> Single cube, new position</div>
+    <video autoplay loop muted playsinline src="videos/push_cube_ood.mp4"></video>
+  </div>
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span> 4+ cubes (unseen count)</div>
+    <video autoplay loop muted playsinline src="videos/push_cube_ood_4cube.mp4"></video>
   </div>
 </div>
 
@@ -55,12 +58,22 @@
 <p class="env-desc">A robot arm picks and stacks cubes. OoD: unseen target placement positions.</p>
 <div class="vid-row col2">
   <div class="vid-cell">
-    <div class="vid-label"><span class="tag tag-ind">InD</span></div>
+    <div class="vid-label"><span class="tag tag-ind">InD</span> Episode 1</div>
     <video autoplay loop muted playsinline src="videos/stack_cube_ind.mp4"></video>
   </div>
   <div class="vid-cell">
-    <div class="vid-label"><span class="tag tag-ood">OoD</span></div>
+    <div class="vid-label"><span class="tag tag-ind">InD</span> Episode 2</div>
+    <video autoplay loop muted playsinline src="videos/stack_cube_ind2.mp4"></video>
+  </div>
+</div>
+<div class="vid-row col2">
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span> Episode 1</div>
     <video autoplay loop muted playsinline src="videos/stack_cube_ood.mp4"></video>
+  </div>
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span> Episode 2</div>
+    <video autoplay loop muted playsinline src="videos/stack_cube_ood2.mp4"></video>
   </div>
 </div>
 
@@ -71,12 +84,22 @@
 <p class="env-desc">A disk pusher deforms a rope. OoD: unseen rope stiffness values.</p>
 <div class="vid-row col2">
   <div class="vid-cell">
-    <div class="vid-label"><span class="tag tag-ind">InD</span></div>
+    <div class="vid-label"><span class="tag tag-ind">InD</span> Episode 1</div>
     <video autoplay loop muted playsinline src="videos/push_rope_ind.mp4"></video>
   </div>
   <div class="vid-cell">
-    <div class="vid-label"><span class="tag tag-ood">OoD</span></div>
+    <div class="vid-label"><span class="tag tag-ind">InD</span> Episode 2</div>
+    <video autoplay loop muted playsinline src="videos/push_rope_ind2.mp4"></video>
+  </div>
+</div>
+<div class="vid-row col2">
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span> Episode 1</div>
     <video autoplay loop muted playsinline src="videos/push_rope_ood.mp4"></video>
+  </div>
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span> Episode 2</div>
+    <video autoplay loop muted playsinline src="videos/push_rope_ood2.mp4"></video>
   </div>
 </div>
 
@@ -84,12 +107,22 @@
 <p class="env-desc">Two robot arms manipulate a cloth. OoD: unseen cloth sizes.</p>
 <div class="vid-row col2">
   <div class="vid-cell">
-    <div class="vid-label"><span class="tag tag-ind">InD</span></div>
+    <div class="vid-label"><span class="tag tag-ind">InD</span> Episode 1</div>
     <video autoplay loop muted playsinline src="videos/cloth_move_ind.mp4"></video>
   </div>
   <div class="vid-cell">
-    <div class="vid-label"><span class="tag tag-ood">OoD</span></div>
+    <div class="vid-label"><span class="tag tag-ind">InD</span> Episode 2</div>
+    <video autoplay loop muted playsinline src="videos/cloth_move_ind2.mp4"></video>
+  </div>
+</div>
+<div class="vid-row col2">
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span> Episode 1</div>
     <video autoplay loop muted playsinline src="videos/cloth_move_ood.mp4"></video>
+  </div>
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span> Episode 2</div>
+    <video autoplay loop muted playsinline src="videos/cloth_move_ood2.mp4"></video>
   </div>
 </div>
 
@@ -100,12 +133,22 @@
 <p class="env-desc">A robot arm pushes granular sand. OoD: doubled particle count.</p>
 <div class="vid-row col2">
   <div class="vid-cell">
-    <div class="vid-label"><span class="tag tag-ind">InD</span></div>
+    <div class="vid-label"><span class="tag tag-ind">InD</span> Episode 1</div>
     <video autoplay loop muted playsinline src="videos/push_sand_ind.mp4"></video>
   </div>
   <div class="vid-cell">
-    <div class="vid-label"><span class="tag tag-ood">OoD</span></div>
+    <div class="vid-label"><span class="tag tag-ind">InD</span> Episode 2</div>
+    <video autoplay loop muted playsinline src="videos/push_sand_ind2.mp4"></video>
+  </div>
+</div>
+<div class="vid-row col2">
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span> Episode 1</div>
     <video autoplay loop muted playsinline src="videos/push_sand_ood.mp4"></video>
+  </div>
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span> Episode 2</div>
+    <video autoplay loop muted playsinline src="videos/push_sand_ood2.mp4"></video>
   </div>
 </div>
 
@@ -113,18 +156,21 @@
 <p class="env-desc">A robot arm pours water into a container. OoD: unseen water quantities.</p>
 <div class="vid-row col2">
   <div class="vid-cell">
-    <div class="vid-label"><span class="tag tag-ind">InD</span></div>
+    <div class="vid-label"><span class="tag tag-ind">InD</span> Episode 1</div>
     <video autoplay loop muted playsinline src="videos/pour_water_ind.mp4"></video>
   </div>
   <div class="vid-cell">
-    <div class="vid-label"><span class="tag tag-ood">OoD</span></div>
-    <video autoplay loop muted playsinline src="videos/pour_water_ood.mp4"></video>
+    <div class="vid-label"><span class="tag tag-ind">InD</span> Episode 2</div>
+    <video autoplay loop muted playsinline src="videos/pour_water_ind2.mp4"></video>
   </div>
 </div>
-<div class="vid-row col2" style="margin-top:6px">
-  <div></div>
+<div class="vid-row col2">
   <div class="vid-cell">
-    <div class="vid-label"><span class="tag tag-ood">OoD</span> Another episode</div>
+    <div class="vid-label"><span class="tag tag-ood">OoD</span> Episode 1</div>
+    <video autoplay loop muted playsinline src="videos/pour_water_ood.mp4"></video>
+  </div>
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span> Episode 2</div>
     <video autoplay loop muted playsinline src="videos/pour_water_ood2.mp4"></video>
   </div>
 </div>
@@ -136,12 +182,22 @@
 <p class="env-desc">A 7-DoF robot arm reaches targets. OoD: expanded workspace regions.</p>
 <div class="vid-row col2">
   <div class="vid-cell">
-    <div class="vid-label"><span class="tag tag-ind">InD</span></div>
+    <div class="vid-label"><span class="tag tag-ind">InD</span> Episode 1</div>
     <video autoplay loop muted playsinline src="videos/robot_arm_ind.mp4"></video>
   </div>
   <div class="vid-cell">
-    <div class="vid-label"><span class="tag tag-ood">OoD</span></div>
+    <div class="vid-label"><span class="tag tag-ind">InD</span> Episode 2</div>
+    <video autoplay loop muted playsinline src="videos/robot_arm_ind2.mp4"></video>
+  </div>
+</div>
+<div class="vid-row col2">
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span> Episode 1</div>
     <video autoplay loop muted playsinline src="videos/robot_arm_ood.mp4"></video>
+  </div>
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span> Episode 2</div>
+    <video autoplay loop muted playsinline src="videos/robot_arm_ood2.mp4"></video>
   </div>
 </div>
 
@@ -149,15 +205,24 @@
 <p class="env-desc">A 2-link planar arm reaches goal positions. OoD: corner-sector goals unseen during training.</p>
 <div class="vid-row col2">
   <div class="vid-cell">
-    <div class="vid-label"><span class="tag tag-ind">InD</span></div>
+    <div class="vid-label"><span class="tag tag-ind">InD</span> Episode 1</div>
     <video autoplay loop muted playsinline src="videos/reacher_ind.mp4"></video>
   </div>
   <div class="vid-cell">
-    <div class="vid-label"><span class="tag tag-ood">OoD</span></div>
-    <video autoplay loop muted playsinline src="videos/reacher_ood.mp4"></video>
+    <div class="vid-label"><span class="tag tag-ind">InD</span> Episode 2</div>
+    <video autoplay loop muted playsinline src="videos/reacher_ind2.mp4"></video>
   </div>
 </div>
-
+<div class="vid-row col2">
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span> Episode 1</div>
+    <video autoplay loop muted playsinline src="videos/reacher_ood.mp4"></video>
+  </div>
+  <div class="vid-cell">
+    <div class="vid-label"><span class="tag tag-ood">OoD</span> Episode 2</div>
+    <video autoplay loop muted playsinline src="videos/reacher_ood2.mp4"></video>
+  </div>
+</div>
 
 <footer>Anonymous submission &nbsp;·&nbsp; NeurIPS 2026 &nbsp;·&nbsp; Video supplement</footer>
 
